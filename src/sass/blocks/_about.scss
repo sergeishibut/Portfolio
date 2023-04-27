@@ -1,0 +1,100 @@
+.about {
+    display: grid;
+    padding-top: 84px;
+    max-width: 1040px;
+    margin: 0 auto;
+    
+    &__subtitle {
+        padding-top: 3px;
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -9%;
+            left: -4px;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            background: #ffa501;
+        }
+    }
+    &__divider {
+        width: 60px;
+        height: 2px;
+        background-color: $main-color;
+        margin-bottom: 15px;
+    }
+}
+.grid-container {
+    display: grid;
+    gap: 70px;
+    
+    /* grid-template-columns: 2;
+    grid-template-rows: 2; */
+    /* justify-content: center; */
+    grid-template-areas: 
+    "lc trc"
+    "lc rbc";
+    
+}
+
+#trc {
+    grid-area: trc;
+}
+#lc {
+    grid-area: lc;
+    
+}
+#rbc {
+    grid-area: rbc;
+}
+
+/* .left-col {
+    padding-right: 70px;
+} */
+/* .top-right-col {
+    height: 244px;
+} */
+.right-buttom-col {
+    display: grid;
+    grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+    grid-auto-rows: 1fr;
+    column-gap: 50px;
+    row-gap: 20px;
+    
+    
+    grid-template-areas: 
+    "topl topr"
+    "botl . ";
+    
+    
+}
+#topr {
+   
+    grid-area: topr;
+}
+#topl {
+    
+    grid-area: topl;
+}
+#botr {
+    
+    grid-area: botl;
+}
+
+
+
+.grid-elem-title {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+}
+.grid-elem-subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}

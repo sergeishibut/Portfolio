@@ -14,7 +14,7 @@
             content: "";
             position: absolute;
             z-index: -1;
-            top: -9%;
+            top: -12%;
             left: -4px;
             width: 36px;
             height: 36px;
@@ -28,10 +28,26 @@
         background-color: $main-color;
         margin-bottom: 15px;
     }
+    &__circle {
+        position: relative;
+        padding: 15px 0 0 15px;
+        @include before_circle;
+        &:before {
+            top: 0;
+        }
+    }
+    &__photo {
+        
+        img {
+            width: 400px;
+            height: 100%;
+        }
+    }
 }
 .grid-container {
     display: grid;
     gap: 70px;
+    row-gap: 40px;
     
     /* grid-template-columns: 2;
     grid-template-rows: 2; */
@@ -43,6 +59,7 @@
 }
 
 #trc {
+    
     grid-area: trc;
 }
 #lc {
@@ -87,11 +104,24 @@
 }
 
 
+/* .grig_elem {
+    display: grid;
+    grid-template-columns: 40px 200px;
+    column-gap: 20px;
+} */
 
+.grid_elem {
+    display: flex;
+    align-items: start;
+}
+.about__circle {
+    margin-right: 20px; /* задаем отступ справа для разделения круга и текста */
+}
 .grid-elem-title {
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
+    @include before_circle;
 }
 .grid-elem-subtitle {
     font-size: 12px;

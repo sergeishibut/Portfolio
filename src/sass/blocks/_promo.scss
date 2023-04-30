@@ -12,6 +12,17 @@
         padding-left: 10px;
         z-index: 2;
         @include before_circle;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -20%;
+            left: -4px;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            background: #ffa501;
+        }
     }
     &__btns {
         margin-top: 25px;
@@ -28,4 +39,5 @@
             text-decoration: none;
         }
     }
+    
 }

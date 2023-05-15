@@ -21,10 +21,17 @@ const percent = parseInt(ratingsCounter.textContent);
 // Устанавливаем ширину элемента ratingsLine в процентах
 ratingsLine.style.width = percent + '%'; */
 
-const ratingCounters = document.querySelectorAll('.skills__ratings-counter');
+/* const ratingCounters = document.querySelectorAll('.skills__ratings-counter');
 
 for (let i = 0; i < ratingCounters.length; i++) {
   const percent = parseInt(ratingCounters[i].textContent);
   const ratingLine = ratingCounters[i].nextElementSibling.querySelector('span');
   ratingLine.style.width = percent + '%';
-}
+} */
+
+const counters = document.querySelectorAll('.skills__ratings-counter'),
+    lines = document.querySelectorAll('.skills__ratings-line span');
+
+counters.forEach( (item, i) => {
+    lines[i].style.width = item.innerHTML;
+})

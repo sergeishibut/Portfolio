@@ -10,6 +10,12 @@
     margin: 0;
     padding: 0;
 }
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+    margin: 25px auto 0 auto;
+}
 
 .container {
     width: 1140px;
@@ -24,3 +30,7 @@
 @import 'blocks/about';
 @import 'blocks/resume';
 @import 'blocks/skills';
+@import 'blocks/portfolio';
+@import 'blocks/price';
+@import 'blocks/contacts';
+@import 'blocks/media';

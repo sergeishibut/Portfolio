@@ -104,68 +104,75 @@
     </section>
 
     <section class="about">
-        <div class="grid-container">
-            <div id="trc" class="top-right-col">
-            <div class="title about__subtitle title_fz16">Про меня</div>
-            <div class="title about__title title_fz36">Меня зовут Александра</div>
-            <div class="about__divider"></div>
-            <div class="title title_fz14 about__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-            </div>
-            <div id="lc" class="left-col">
+        <div class="container">
+            <div class="about__wrapper">
                 <div class="about__photo">
-                    <img src="img/main_photo.jpg" alt="pic">
-                </div>
-            </div>
-            <div id="rbc" class="right-buttom-col">
-                
-                <div id="topl" class="grid_elem">
-                    <div class="about__circle">
-                        <img src="icons/about_me/web_development.svg" alt="web-dev">
-                    </div>
-                    <div>
-                        <div class="grid-elem-title">
-                            Web-разработка
-                        </div>
-                        <div class="grid-elem-subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </div>
-                    </div>
-                </div>
+                    <!-- <img src="img/main_photo.jpg" alt="photo"> -->
+                    <!-- <img srcset="img/MobileMe.jpg 300w, img/main_photo.jpg 400w" 
+                    sizes="(max-width: 576px) 280px, (min-width: 577px) 400px" src="img/main_photo.jpg" alt="photo">
+                </div> -->
 
-                <div id="topr" class="grid_elem">
-                    <div class="about__circle">
-                        <img src="icons/about_me/mobile_dev.svg" alt="mobile-dev">
-                    </div>
-                    <div>
-                        <div class="grid-elem-title">
-                            Разработка приложений
+                <picture>
+                    <source media="(max-width: 576px)" srcset="img/MobileMe.jpg">
+                    <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                    <img src="img/main_photo.jpg" alt="photo">
+                </picture>
+                </div>
+                <div class="about__descr">
+                    <h2 class="title title_fz16 about__title">Про меня</h2>
+                    <div class="title title_fz36 about__subtitle">Меня зовут Александра</div>
+                    <div class="divider"></div>
+                    <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+                <div class="about__skills">
+                    <div class="about__skills-item">
+                        <div class="about__skills-circle">
+                            <img src="icons/about_me/web_development.svg" alt="web-dev">
                         </div>
-                        <div class="grid-elem-subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <div>
+                            <div class="title title_fz14">
+                                Web-разработка
+                            </div>
+                            <p class="about__skills-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__skills-item">
+                        <div class="about__skills-circle">
+                            <img src="icons/about_me/mobile_dev.svg" alt="mobile-dev">
+                        </div>
+                        <div>
+                            <div class="title title_fz14">
+                                Разработка приложений
+                            </div>
+                            <p class="about__skills-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__skills-item">
+                        <div class="about__skills-circle">
+                            <img src="icons/about_me/design.svg" alt="design">
+                        </div>
+                        <div>
+                            <div class="title title_fz14">
+                                UI/UX Design
+                            </div>
+                            <p class="about__skills-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
-                <div id="botr" class="grid_elem">
-                    <div class="about__circle">
-                        <img src="icons/about_me/design.svg" alt="design">
-                    </div>
-                    <div>
-                        <div class="grid-elem-title">
-                            UI/UX Design
-                        </div>
-                        <div class="grid-elem-subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </section>
+
+    
     <section class="resume">
         <div class="container">
-            <h2 class="title title_fz16 resume__title">Опыт</h2>
+            <h2 class="title title_fz16 title__section-title">Опыт</h2>
             <div class="title title-fz36 resume__subtitle">Чем я буду полезна</div>
             <div class="resume__divider"></div>
 
@@ -316,8 +323,8 @@
                         <p>Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения.</p>
                     </div>
                 </div>
-
             </div>
+
             <div class="skills__ratings">
                 <div class="skills__ratings-item">
                     <div class="title title_fz14 skills__ratings-title">
@@ -367,6 +374,134 @@
         </div>
     </section>
 
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="title title_fz16 title__section-title">Портфолио</h2>
+            <div class="title title_fz36 portfolio__subtitle">Мои работы</div>
+            <div class="skills__divider"></div>
+            <div class="portfolio__wrapper">
+                <a href="#" class="portfolio__item">
+                    <img src="img/works/uber.jpg" alt="uber">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="img/works/pulse.jpg" alt="uber">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="img/works/bread.jpg" alt="uber">
+                </a>
+                <a href="#" class="portfolio__item vertical">
+                    <img src="img/works/plans.jpg" alt="uber">
+                </a>
+                <a href="#" class="portfolio__item">
+                    <img src="img/works/ipad.jpg" alt="uber">
+                </a>
+                <a href="#" class="portfolio__item horizontal">
+                    <img src="img/works/mac.jpg" alt="uber">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="container">
+            <div class="title title_fz24 price__title">Прайс-лист</div>
+            <div class="price__divider"></div>
+                <div class="price__wrapper">
+                    <div class="price__item">
+                        <div class="price__type">Landing-page</div>
+                        <div class="price__count">от 8000 руб.</div>
+                        <div class="price__descr">Одностраничный сайт для презентации услуг/товаров/...</div>
+                    </div>
+                    <div class="price__item">
+                        <div class="price__type">Корпоративный сайт</div>
+                        <div class="price__count">от 20000 руб.</div>
+                        <div class="price__descr">Сайт для вашего бизнеса или компании</div>
+                    </div>
+                    <div class="price__item">
+                        <div class="price__type">Интернет-магазин</div>
+                        <div class="price__count">от 30000 руб.</div>
+                        <div class="price__descr">Инструмент для ваших продаж в сети</div>
+                    </div>
+                    <div class="price__item">
+                        <div class="price__type">Web-приложение</div>
+                        <div class="price__count">от 28000 руб.</div>
+                        <div class="price__descr">Приложение внутри браузера для лучшего комфорта</div>
+                    </div>
+                    <div class="price__item">
+                        <div class="price__type">Android/IOS Приложение</div>
+                        <div class="price__count">от 25000 руб.</div>
+                        <div class="price__descr">Приложение для смартфона любой ОС</div>
+                    </div>
+                    <div class="price__item">
+                        <div class="price__type">Дизайн</div>
+                        <div class="price__count">Индивидуально</div>
+                        <div class="price__descr">Создам дизайн для вашего сайта/приложения...</div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts__photo">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="img/MobileMe.jpg">
+                        <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+                        <img src="img/main_photo.jpg" alt="photo">
+                    </picture>
+                </div>
+                <div class="contacts__descr">
+                    <h2 class="title title_fz16 contacts__title">Контакты</h2>
+                    <div class="title title_fz36 contacts__subtitle">Свяжитесь со мной</div>
+                    <div class="contacts__divider"></div>
+
+                    <div class="title title_fz14 contacts__text">Любым удобным для вас способом:</div>
+                    <div class="contacts__social">
+                        <a href="" class="contacts__link">
+                            <img src="icons/social/Facebook straight.svg" alt="">
+                        </a>
+                        <a href="" class="contacts__link">
+                            <img src="icons/social/Telegram straight.svg" alt="">
+                        </a>
+                        <a href="" class="contacts__link">
+                            <img src="icons/social/Instagram straight.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="title title_fz14 contacts__text">Или оставьте ваши данные и я сама вам напишу:</div>
+
+                    <form action="#" class="contacts__form">
+                        <div class="contacts__input">
+                            <input name="name" id="name" type="text">
+                            <label for="name">Ваше имя</label>
+                        </div>
+    
+                        <div class="contacts__input">
+                            <input name="email" id="email" type="email">
+                            <label for="email">Ваша почта</label>
+                        </div>
+    
+                        <div class="contacts__textarea">
+                            <textarea name="text" id=""></textarea>
+                            <label for="text">Ваше сообщение</label>
+                        </div>
+                        <div class="contacts__triggers">
+                            <button class="contacts__btn btn">Отправить сообщение</button>
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>я согласен с <a href="/policy.html">политикой конфиденциальности</a></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </section>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
